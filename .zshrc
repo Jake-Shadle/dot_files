@@ -110,6 +110,5 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Perforce bullshit
 export P4USER='DICE\jshadle'
-export P4PASSWD='teddybearfighting1'
 export P4PORT='dice-p4edge-fb.dice.ad.ea.com:2001'
 
