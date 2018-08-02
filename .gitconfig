@@ -1,0 +1,9 @@
+[user]
+	name = Jake Shadle
+	email = jake.shadle@frostbite.com
+[core]
+	editor = code --wait
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE

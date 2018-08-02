@@ -1,0 +1,9 @@
+#!/bin/sh
+
+layout="$(xkblayout-state print %s)"
+
+if [ "$layout" = "us" ]; then
+  echo "🇺🇸"
+else
+  echo "🇸🇪"
+fi

@@ -1,0 +1,52 @@
+{
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorCustomizations": {
+        "editorWhitespace.foreground": "#707070",
+        "editorLineNumber.foreground": "#707070"
+    },
+    "editor.renderWhitespace": "all",
+    "editor.tokenColorCustomizations": {
+        "[Atom One Dark]": {
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "comment.line"
+                    ],
+                    "settings": {
+                        "foreground": "#98C379"
+                    }
+                },
+                {
+                    "name": "comment_punc",
+                    "scope": "punctuation.definition.comment",
+                    "settings": {
+                        "foreground": "#98C379",
+                        "fontStyle": "italic bold"
+                    }
+                },
+                {
+                    "name": "String",
+                    "scope": [
+                        "string"
+                    ],
+                    "settings": {
+                        "foreground": "#00e500"
+                    }
+                },
+            ]
+        }
+    },
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "rust.cfg_test": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "editor.selectionClipboard": false,
+    "diffEditor.ignoreTrimWhitespace": false
+}

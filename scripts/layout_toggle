@@ -1,0 +1,1 @@
+(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap se || setxkbmap us && pkill -RTMIN+1 i3blocks
