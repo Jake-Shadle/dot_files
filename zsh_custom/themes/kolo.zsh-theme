@@ -19,7 +19,7 @@ theme_precmd () {
 
 setopt prompt_subst
 PROMPT='%B%F{magenta}%c%B%F{green}${vcs_info_msg_0_}%B%F{magenta} %{$reset_color%}%% '
-RPS1='$(vi_mode_prompt_info) '
+RPS1='$(vi_mode_prompt_info) ${return_code}'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
