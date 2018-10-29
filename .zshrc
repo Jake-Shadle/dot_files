@@ -112,3 +112,16 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export P4USER='DICE\jshadle'
 export P4PORT='dice-p4edge-fb.dice.ad.ea.com:2001'
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/jshadle/google-cloud-sdk/path.zsh.inc' ]; then source '/home/jshadle/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/jshadle/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/jshadle/google-cloud-sdk/completion.zsh.inc'; fi
+
+function path_remove {
+  # Delete path by parts so we can never accidentally remove sub paths
+  PATH=${PATH//":$1:"/":"} # delete any instances in the middle
+  PATH=${PATH/#"$1:"/} # delete any instance at the beginning
+  PATH=${PATH/%":$1"/} # delete any instance in the at the end
+}

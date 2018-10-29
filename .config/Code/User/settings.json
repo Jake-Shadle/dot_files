@@ -48,5 +48,6 @@
     },
     "gitlens.historyExplorer.enabled": true,
     "editor.selectionClipboard": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "extensions.ignoreRecommendations": false
 }
