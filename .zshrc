@@ -106,7 +106,7 @@ alias python='/usr/bin/python3'
 alias pip='/usr/bin/python3 -m pip'
 alias spip='sudo /usr/bin/python3 -m pip'
 alias i3lock='~/scripts/mmlock'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='~/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Perforce bullshit
 export P4USER='DICE\jshadle'
