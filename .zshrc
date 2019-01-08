@@ -4,6 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:/opt/gitkraken:$HOME/scripts:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jshadle/.oh-my-zsh
 
+fpath+=~/.zfunc
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -107,6 +109,9 @@ alias pip='/usr/bin/python3 -m pip'
 alias spip='sudo /usr/bin/python3 -m pip'
 alias i3lock='~/scripts/mmlock'
 alias config='~/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias copy='xclip -sel clip'
+alias ls='exa'
+alias grep='rg'
 
 # Perforce bullshit
 export P4USER='DICE\jshadle'
