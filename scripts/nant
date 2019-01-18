@@ -1,2 +1,0 @@
-#!/bin/sh
-exec ~/packages/Framework/7.13.01/nant "$@"
