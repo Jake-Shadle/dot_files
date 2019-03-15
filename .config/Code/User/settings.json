@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Atom One Dark",
     "workbench.colorCustomizations": {
         "editorWhitespace.foreground": "#707070",
         "editorLineNumber.foreground": "#707070"
@@ -38,16 +37,58 @@
         }
     },
     "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "rust.cfg_test": false,
+    "rust-client.channel": "stable",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.historyExplorer.enabled": true,
     "editor.selectionClipboard": false,
+    "editor.formatOnSave": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "extensions.ignoreRecommendations": false
+    "extensions.ignoreRecommendations": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "breadcrumbs.enabled": true,
+    "todohighlight.include": [
+        "**/*.rs"
+    ],
+    "todohighlight.keywords": [
+        "panic!(",
+        {
+            "text": "panic!(",
+            "color": "#ff0000",
+            "backgroundColor": "black",
+            "overviewRulerColor": "grey"
+        },
+        "expect(",
+        {
+            "text": "expect(",
+            "color": "#ff0000",
+            "backgroundColor": "black",
+            "overviewRulerColor": "grey"
+        },
+        "unwrap()",
+        {
+            "text": "unwrap()",
+            "color": "#ff0000",
+            "backgroundColor": "black",
+            "overviewRulerColor": "grey"
+        },
+    ],
+    "peacock.affectActivityBar": true,
+    "peacock.affectStatusBar": true,
+    "peacock.favoriteColors": [
+        {
+            "name": "greenish",
+            "value": "#667e44"
+        },
+        {
+            "name": "purple",
+            "value": "#5c5d85"
+        }
+    ],
 }
