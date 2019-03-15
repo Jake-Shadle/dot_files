@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/opt/gitkraken:$HOME/scripts:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/jshadle/.oh-my-zsh
+export ZSH=/home/jake/.oh-my-zsh
 
 fpath+=~/.zfunc
 
@@ -67,14 +67,13 @@ plugins=(
   emoji
   fedora
   git_auto_status
-  pip
-  pylint
-  python
-  virtualenv
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/fzf/shell/key-bindings.zsh
+# gcloud
+source /usr/share/google-cloud-sdk/completion.zsh.inc
 
 # User configuration
 
@@ -108,21 +107,10 @@ alias python='/usr/bin/python3'
 alias pip='/usr/bin/python3 -m pip'
 alias spip='sudo /usr/bin/python3 -m pip'
 alias i3lock='~/scripts/mmlock'
-alias config='~/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias copy='xclip -sel clip'
 alias ls='exa'
 alias grep='rg'
-
-# Perforce bullshit
-export P4USER='DICE\jshadle'
-export P4PORT='dice-p4edge-fb.dice.ad.ea.com:2001'
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jshadle/google-cloud-sdk/path.zsh.inc' ]; then source '/home/jshadle/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/jshadle/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/jshadle/google-cloud-sdk/completion.zsh.inc'; fi
 
 function path_remove {
   # Delete path by parts so we can never accidentally remove sub paths
@@ -130,3 +118,9 @@ function path_remove {
   PATH=${PATH/#"$1:"/} # delete any instance at the beginning
   PATH=${PATH/%":$1"/} # delete any instance in the at the end
 }
+
+# added by travis gem
+[ -f /home/jake/.travis/travis.sh ] && source /home/jake/.travis/travis.sh
+
+# Add musl shims
+export PATH=/usr/local/musl/bin:$PATH
