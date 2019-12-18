@@ -32,7 +32,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -181,6 +181,7 @@ exec /usr/bin/pasystray
 exec ~/scripts/run_ssh_agent
 # Start dunst for notifications, using the config
 exec --no-startup-id "/usr/bin/dunst -c ~/.config/dunst/dunstrc"
+exec --no-startup-id compton -b &
 
 # Allow toggling between US and SE keyboard layouts with Alt+Shift_L
 # the reason for bindcode instead of bindsym is because Alt+Shift_L

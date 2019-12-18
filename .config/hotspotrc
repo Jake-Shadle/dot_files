@@ -1,0 +1,6 @@
+[RecentFiles]
+File1[$e]=$HOME/code/texture-synthesis/perf.data
+Name1[$e]=perf.data
+
+[RecordPage]
+offCpuProfiling=false

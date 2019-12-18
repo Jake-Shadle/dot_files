@@ -26,7 +26,7 @@ if [ "$arg_image" ]; then
 else
     BKG_IMG="$FOLDER/.img/background.png"  # Default
 
-    curl -L -o $BKG_IMG https://source.unsplash.com/featured/\?nature,forest,sky,star
+    curl -L -o $BKG_IMG https://source.unsplash.com/random/featured/\?nature,forest,sky,star
     convert -format png $BKG_IMG $BKG_IMG
 fi
 

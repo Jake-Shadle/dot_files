@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jake/.oh-my-zsh
 
-fpath+=~/.zfunc
+fpath+=/home/jake/.zfunc
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -66,7 +66,6 @@ plugins=(
   docker
   emoji
   fedora
-  git_auto_status
   kubectl
 )
 
@@ -74,6 +73,9 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/fzf/shell/key-bindings.zsh
 # gcloud
 source /usr/share/google-cloud-sdk/completion.zsh.inc
+# Not sure why completions don't work unless this is run, supposedly
+# the compdef diesel line in the beginning of the file does this already?
+compdef _diesel diesel
 
 # User configuration
 
@@ -111,12 +113,17 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias copy='xclip -sel clip'
 alias ls='exa'
 alias grep='rg'
+alias docker='podman'
 
 function path_remove {
   # Delete path by parts so we can never accidentally remove sub paths
   PATH=${PATH//":$1:"/":"} # delete any instances in the middle
   PATH=${PATH/#"$1:"/} # delete any instance at the beginning
   PATH=${PATH/%":$1"/} # delete any instance in the at the end
+}
+
+function execpod(){
+  kubectl exec -it $(kubectl get pods | grep -m1 $1 | grep -o '^\s*\S\+') /bin/bash
 }
 
 # added by travis gem
