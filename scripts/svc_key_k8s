@@ -1,0 +1,15 @@
+#!/bin/bash
+set -eu
+
+account=$1
+sekret=$2
+namespace=${3:-default}
+
+temp="$(mktemp)"
+
+gcloud iam service-accounts keys create $temp --iam-account=$account
+kubectl create secret generic $2 --from-file=svc_account_key.json=$temp -n $namespace
+
+rm $temp
+
+kubectl get secrets -n $namespace

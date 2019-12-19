@@ -1,0 +1,8 @@
+code/
+go/
+flatpak/
+Pictures/
+Downloads/
+Documents/
+.*/
+!.config/
