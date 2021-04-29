@@ -65,17 +65,14 @@ plugins=(
   cargo
   docker
   emoji
-  fedora
   kubectl
+  dnf
 )
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/fzf/shell/key-bindings.zsh
 # gcloud
 source /usr/share/google-cloud-sdk/completion.zsh.inc
-# Not sure why completions don't work unless this is run, supposedly
-# the compdef diesel line in the beginning of the file does this already?
-compdef _diesel diesel
 
 # User configuration
 
@@ -114,6 +111,10 @@ alias copy='xclip -sel clip'
 alias ls='exa'
 alias grep='rg'
 alias docker='podman'
+alias grbm='git rebase main'
+alias grbmm='git rebase master'
+alias gcm='git checkout main'
+alias gcmm='git checkout master'
 
 function path_remove {
   # Delete path by parts so we can never accidentally remove sub paths
@@ -131,3 +132,22 @@ function execpod(){
 
 # Add musl shims
 export PATH=/usr/local/musl/bin:$PATH
+# Add ark
+export PATH="$HOME/.local/bin:$PATH"
+
+# Add gh completions if they aren't already present
+if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
+    mkdir -pv $ZSH/completions
+    gh completion --shell zsh > $ZSH/completions/_gh
+    echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
+fi
+
+# Force gcloud/gsutil to use python 2 because they are broken in python 3.9.
+# I hate python.
+export CLOUDSDK_PYTHON=python2
+
+PATH="/home/jake/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/jake/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/jake/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/jake/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jake/perl5"; export PERL_MM_OPT;

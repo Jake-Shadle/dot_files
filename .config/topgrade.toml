@@ -6,8 +6,11 @@
 
 # Same options as the command line flag
 disable = [
-	"gem",
-	"go"
+    "firmware",
+    "gem",
+    "gcloud",
+    "pipx",
+    "vscode",
 ]
 
 # List of remote machines with Topgrade installed on them

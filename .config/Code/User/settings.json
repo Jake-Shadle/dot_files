@@ -1,7 +1,25 @@
 {
     "workbench.colorCustomizations": {
         "editorWhitespace.foreground": "#707070",
-        "editorLineNumber.foreground": "#707070"
+        "editorLineNumber.foreground": "#707070",
+        "terminal.foreground": "#abb2bf",
+        "terminal.background": "#282c34",
+        "terminal.ansiBlack": "#1e2127",
+        "terminal.ansiBlue": "#61afef",
+        "terminal.ansiBrightBlack": "#5c6370",
+        "terminal.ansiBrightBlue": "#61afef",
+        "terminal.ansiBrightCyan": "#56b6c2",
+        "terminal.ansiBrightGreen": "#98c379",
+        "terminal.ansiBrightMagenta": "#c678dd",
+        "terminal.ansiBrightRed": "#e06c75",
+        "terminal.ansiBrightWhite": "#e6efff",
+        "terminal.ansiBrightYellow": "#d19a66",
+        "terminal.ansiCyan": "#56b6c2",
+        "terminal.ansiGreen": "#98c379",
+        "terminal.ansiMagenta": "#c678dd",
+        "terminal.ansiRed": "#e06c75",
+        "terminal.ansiWhite": "#828791",
+        "terminal.ansiYellow": "#d19a66",
     },
     "editor.renderWhitespace": "all",
     "editor.tokenColorCustomizations": {
@@ -37,27 +55,32 @@
             ]
         }
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "window.titleBarStyle": "custom",
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Fira Code, Hack, Source Code Pro, Courier New",
     "editor.fontLigatures": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "rust.cfg_test": false,
-    "rust-client.channel": "stable",
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
+    "rust-analyzer.updates.askBeforeDownload": false,
+    "rust-analyzer.checkOnSave.extraArgs": [
+        "--target-dir",
+        "target/ra-check"
+    ],
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
     "editor.selectionClipboard": false,
     "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
     "diffEditor.ignoreTrimWhitespace": false,
     "extensions.ignoreRecommendations": true,
     "workbench.colorTheme": "Atom One Dark",
     "breadcrumbs.enabled": true,
     "shellcheck.executablePath": "shellcheck",
+    "shellcheck.enable": true,
     "todohighlight.include": [
         "**/*.rs"
     ],
@@ -149,4 +172,23 @@
         }
     ],
     "git.suggestSmartCommit": false,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/target/**": true
+    },
+    "terminal.integrated.fontFamily": "Fira Code",
+    "workbench.startupEditor": "newUntitledFile",
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
 }

@@ -9,3 +9,14 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [rebase]
 	autosquash = true
+[alias]
+	new = !git init && git symbolic-ref HEAD refs/heads/main
+[credential]
+	helper = manager
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
