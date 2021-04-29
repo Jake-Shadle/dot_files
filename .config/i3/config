@@ -189,8 +189,8 @@ exec --no-startup-id compton -b &
 bindcode Mod1+50 exec ~/scripts/layout_toggle
 
 # Additional key bindings
-bindsym Print exec "shutter -f"
-bindsym Shift+Print exec "shutter -a"
+bindsym Print exec "flameshot gui"
+bindsym Shift+Print exec "flameshot full"
 
 # Set the cursor back to normal and background to black
 exec xsetroot -cursor_name left_ptr -solid black
