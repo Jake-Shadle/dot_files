@@ -1,2 +1,0 @@
-#xrandr --output DVI-I-1 --rotate left --right-of DP-2 --output HDMI-1 --left-of DP-2 --rotate right --output DP-2 --primary
-xrandr --output DP-3 --primary
