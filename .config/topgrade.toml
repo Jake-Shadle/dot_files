@@ -10,7 +10,7 @@ disable = [
     "gem",
     "gcloud",
     "pipx",
-    "vscode",
+    "pip3",
 ]
 
 # List of remote machines with Topgrade installed on them

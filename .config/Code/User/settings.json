@@ -190,5 +190,13 @@
         "[ ]",
         "[x]"
     ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)"
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "redhat.telemetry.enabled": false,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "latex",
+        "markdown",
+        "plaintext",
+        "text"
+    ]
 }
