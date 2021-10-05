@@ -66,13 +66,13 @@ plugins=(
   docker
   emoji
   kubectl
-  dnf
+  archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/fzf/shell/key-bindings.zsh
+#source /usr/share/fzf/shell/key-bindings.zsh
 # gcloud
-source /usr/share/google-cloud-sdk/completion.zsh.inc
+#source /usr/share/google-cloud-sdk/completion.zsh.inc
 
 # User configuration
 
@@ -146,8 +146,5 @@ fi
 # I hate python.
 export CLOUDSDK_PYTHON=python2
 
-PATH="/home/jake/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/jake/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/jake/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/jake/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/jake/perl5"; export PERL_MM_OPT;
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh

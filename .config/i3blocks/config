@@ -30,9 +30,9 @@ markup=none
 
 [language]
 #label=LNG
-command=~/scripts/layout_flag
+command=$SCRIPT_DIR/../layout_flag
 interval=once
-signal=1
+signal=11
 
 # Volume indicator
 #

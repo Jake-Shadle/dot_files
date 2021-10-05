@@ -1,1 +1,11 @@
-(setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap se || setxkbmap us && pkill -RTMIN+1 i3blocks
+#!/usr/bin/env bash
+
+layout="$(xkblayout-state print %s)"
+
+if [ "$layout" = "us" ]; then
+    setxkbmap se
+else
+    setxkbmap us
+fi
+
+pkill -SIGRTMIN+11 i3blocks

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 layout="$(xkblayout-state print %s)"
 
