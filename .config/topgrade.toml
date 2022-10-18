@@ -5,13 +5,7 @@
 #]
 
 # Same options as the command line flag
-disable = [
-    "firmware",
-    "gem",
-    "gcloud",
-    "pipx",
-    "pip3",
-]
+disable = ["firmware", "gem", "gcloud", "pipx", "pip3", "containers"]
 
 # List of remote machines with Topgrade installed on them
 #remote_topgrades = ["toothless", "pi", "parnas"]

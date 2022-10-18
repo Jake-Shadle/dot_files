@@ -55,7 +55,6 @@
             ]
         }
     },
-    "window.zoomLevel": 0,
     "window.titleBarStyle": "custom",
     "editor.fontFamily": "Fira Code, Hack, Source Code Pro, Courier New",
     "editor.fontLigatures": true,
@@ -198,5 +197,7 @@
         "markdown",
         "plaintext",
         "text"
-    ]
+    ],
+    "git.mergeEditor": false,
+    "window.zoomLevel": 1
 }

@@ -62,7 +62,7 @@ ZSH_THEME="kolo"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  cargo
+  rust
   docker
   emoji
   kubectl
@@ -115,6 +115,7 @@ alias grbm='git rebase main'
 alias grbmm='git rebase master'
 alias gcm='git checkout main'
 alias gcmm='git checkout master'
+alias ct='cargo nextest run'
 
 function path_remove {
   # Delete path by parts so we can never accidentally remove sub paths
@@ -142,9 +143,9 @@ if [[ ! -d "$ZSH/completions" || ! -f "$ZSH/completions/_gh" ]]; then
     echo "gh added completions: gh completion --shell zsh > $ZSH/completions/_gh"
 fi
 
-# Force gcloud/gsutil to use python 2 because they are broken in python 3.9.
-# I hate python.
-export CLOUDSDK_PYTHON=python2
+export CLOUDSDK_PYTHON=python3
+# Use gke plugin before kubectl 1.25
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh

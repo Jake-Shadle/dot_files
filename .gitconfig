@@ -9,6 +9,7 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [rebase]
 	autosquash = true
+	autoStash = true
 [alias]
 	new = !git init && git symbolic-ref HEAD refs/heads/main
 [credential]
@@ -20,3 +21,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[push]
+	autoSetupRemote = true
